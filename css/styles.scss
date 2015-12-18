@@ -1,1 +1,27 @@
 @import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.wrapper {
+  @include outer-container;
+
+  .rows {
+    @include fill-parent();
+    @include row(table);
+    border: 2px solid orange;
+  }
+
+  .col3 {
+    @include span-columns(4);
+    @include reset-display;
+    @include pad();
+    border: 2px solid pink;
+  }
+
+  .col2 {
+    @include span-columns(6);
+    @include reset-display;
+    @include pad();
+    border: 2px solid pink;
+  }
+
+}
