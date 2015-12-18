@@ -1,27 +1,93 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-.wrapper {
-  @include outer-container;
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .rows {
-    @include fill-parent();
-    @include row(table);
-    border: 2px solid orange;
+$primary-font: sans-serif;
+
+body {
+  .wrapper {
+    @include outer-container(100%);
+
+    .rows {
+      @include span-columns(12);
+      @include omega();
+    }
+
+    .col3 {
+      @include span-columns(4);
+      @include reset-display;
+      @include pad();
+      border: 2px solid pink;
+    }
+
+    .col2 {
+      @include span-columns(6);
+      @include reset-display;
+      @include pad();
+      border: 2px solid pink;
+    }
   }
 
-  .col3 {
-    @include span-columns(4);
-    @include reset-display;
-    @include pad();
-    border: 2px solid pink;
+  #nav {
+    img {
+      height: 50px;
+      width: 225px;
+      float: left;
+    }
+
+    ul {
+      list-style: none;
+      float: right;
+      li {
+        display: inline;
+        text-transform: uppercase;
+        margin: 20px;
+        font-family: $primary-font;
+      }
+    }
   }
 
-  .col2 {
-    @include span-columns(6);
-    @include reset-display;
-    @include pad();
-    border: 2px solid pink;
-  }
+  #header {
+    img {
+      max-height: 600px;
+      width: 100%;
+      background-size: cover;
+      position: relative;
+    }
 
+    #banner {
+      @include centerer;
+      text-align: center;
+
+      h1  {
+        color: white;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: 3em;
+      }
+
+      #play {
+        background-color: #39f;
+        height: 50px;
+        width: 100px;
+        margin-left: 300px;
+        position: relative;
+
+        #button {
+          @include centerer;
+          
+          height: 20px;
+          border-left: 25px solid white;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+      }
+    }
+  }
 }

@@ -4,33 +4,82 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.wrapper {
-  max-width: 68em;
+body .wrapper {
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  .wrapper::after {
+  body .wrapper::after {
     clear: both;
     content: "";
     display: table; }
-  .wrapper .rows {
+  body .wrapper .rows {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
     width: 100%;
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    border: 2px solid orange; }
-  .wrapper .col3 {
-    display: table-cell;
-    width: 33.33333%;
+    margin-right: 0; }
+    body .wrapper .rows:last-child {
+      margin-right: 0; }
+  body .wrapper .col3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
     padding: 2.35765%;
     border: 2px solid pink; }
-  .wrapper .col2 {
+    body .wrapper .col3:last-child {
+      margin-right: 0; }
+  body .wrapper .col2 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
     padding: 2.35765%;
     border: 2px solid pink; }
-    .wrapper .col2:last-child {
+    body .wrapper .col2:last-child {
       margin-right: 0; }
+body #nav img {
+  height: 50px;
+  width: 225px;
+  float: left; }
+body #nav ul {
+  list-style: none;
+  float: right; }
+  body #nav ul li {
+    display: inline;
+    text-transform: uppercase;
+    margin: 20px;
+    font-family: sans-serif; }
+body #header img {
+  max-height: 600px;
+  width: 100%;
+  background-size: cover;
+  position: relative; }
+body #header #banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  body #header #banner h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 3em; }
+  body #header #banner #play {
+    background-color: #39f;
+    height: 50px;
+    width: 100px;
+    margin-left: 300px;
+    position: relative; }
+    body #header #banner #play #button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 20px;
+      border-left: 25px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent; }
 
 /*# sourceMappingURL=styles.css.map */
