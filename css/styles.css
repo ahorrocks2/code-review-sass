@@ -20,6 +20,13 @@ body .wrapper {
     margin-right: 0; }
     body .wrapper .rows:last-child {
       margin-right: 0; }
+    body .wrapper .rows:nth-child(5) {
+      background-color: #575250;
+      height: 300px; }
+    body .wrapper .rows:last-child {
+      background-color: #000;
+      height: 300px;
+      border-color: 1px solid #575250; }
   body .wrapper .col3 {
     float: left;
     display: block;
@@ -34,10 +41,26 @@ body .wrapper {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    padding: 2.35765%; }
+    width: 40.29137%;
+    padding: 2.35765%;
+    position: relative;
+    text-align: center; }
     body .wrapper .col2:last-child {
       margin-right: 0; }
+    body .wrapper .col2:first-child {
+      margin-left: 8.5298%; }
+    body .wrapper .col2 img {
+      width: 100%; }
+    body .wrapper .col2 h1 {
+      color: #3a53a4; }
+    body .wrapper .col2 .join {
+      position: absolute;
+      left: 25%;
+      right: 25%;
+      width: 50%;
+      padding: 10px;
+      background-color: #2eccc6;
+      border: 10px solid #2eccc6; }
 body #nav img {
   height: 50px;
   width: 225px;
@@ -88,5 +111,12 @@ body #testimony {
   font-family: sans-serif; }
   body #testimony p {
     font-style: italic; }
+body #info {
+  font-family: sans-serif;
+  margin-bottom: 50px; }
+  body #info h3 {
+    color: grey;
+    text-align: left;
+    font-weight: 200; }
 
 /*# sourceMappingURL=styles.css.map */

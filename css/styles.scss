@@ -17,6 +17,17 @@ body {
     .rows {
       @include span-columns(12);
       @include omega();
+
+      &:nth-child(5) {
+        background-color: #575250;
+        height: 300px;
+      }
+
+      &:last-child {
+        background-color: #000;
+        height: 300px;
+        border-color: 1px solid #575250;
+      }
     }
 
     .col3 {
@@ -30,9 +41,33 @@ body {
     }
 
     .col2 {
-      @include span-columns(6);
+      @include span-columns(5);
       @include reset-display;
       @include pad();
+      position: relative;
+
+      &:first-child {
+        @include shift(1);
+      }
+
+      text-align: center;
+      img {
+        width: 100%;
+      }
+
+      h1 {
+        color: #3a53a4;
+      }
+
+      .join {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        width: 50%;
+        padding: 10px;
+        background-color: #2eccc6;
+        border: 10px solid #2eccc6;
+      }
     }
   }
 
@@ -100,6 +135,16 @@ body {
     font-family: $primary-font;
     p {
       font-style: italic;
+    }
+  }
+
+  #info {
+    font-family: $primary-font;
+    margin-bottom: 50px;
+    h3 {
+      color: grey;
+      text-align: left;
+      font-weight: 200;
     }
   }
 }
