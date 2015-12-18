@@ -20,17 +20,19 @@ body {
     }
 
     .col3 {
-      @include span-columns(4);
+      @include span-columns(3.5);
       @include reset-display;
       @include pad();
-      border: 2px solid pink;
+
+      &:first-child {
+        @include shift(.75);
+      }
     }
 
     .col2 {
       @include span-columns(6);
       @include reset-display;
       @include pad();
-      border: 2px solid pink;
     }
   }
 
@@ -39,16 +41,19 @@ body {
       height: 50px;
       width: 225px;
       float: left;
+      margin: 20px;
     }
 
     ul {
       list-style: none;
       float: right;
+      margin: 40px 5px;
       li {
         display: inline;
         text-transform: uppercase;
         margin: 20px;
         font-family: $primary-font;
+        color: grey;
       }
     }
   }
@@ -81,13 +86,20 @@ body {
 
         #button {
           @include centerer;
-          
+
           height: 20px;
           border-left: 25px solid white;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
         }
       }
+    }
+  }
+
+  #testimony {
+    font-family: $primary-font;
+    p {
+      font-style: italic;
     }
   }
 }
